@@ -63,4 +63,16 @@ Click **Send**, and the response should return:
    "challenge": "test-challenge-value"
 }
 ```
+## 📝 **Testing in Slack**
 
+Go to Slack API Events Subscription
+
+Navigate to Slack API Dashboard → Your App → Event Subscriptions
+
+Enable event subscriptions and enter webhook URL:
+```sh
+https://slack-webhook-production-1ea0.up.railway.app/slack-webhook
+```
+Slack will send a URL verification request. 
+
+If successful, Slack will display **"Request URL Verified"**
