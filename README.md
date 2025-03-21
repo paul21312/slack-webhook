@@ -39,9 +39,9 @@ npm start
 
 ### **Using curl**
 
-curl -X POST -H "Content-Type: application/json" \
--d '{"type": "url_verification", "challenge": "test-challenge-value"}' \
-<your-ngrok-or-server-url>/slack-webhook
+```sh
+curl -X POST -H "Content-Type: application/json" -d '{"type": "url_verification", "challenge": "test-challenge-value"}' <your-ngrok-or-server-url>/slack-webhook
+```
 
 Expected Response:
 
