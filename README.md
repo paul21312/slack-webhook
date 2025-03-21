@@ -1,40 +1,38 @@
-Slack Webhook Handler
+# **Slack Webhook Handler**
 
-📌 Overview
+## 📌 **Overview**
 
 This project is a webhook handler for Slack’s URL verification process. It accepts POST requests and responds with the challenge token.
 
-🛠 Tech Stack
+## 🛠 **Tech Stack**
 
-Node.js
+**- Node.js
+- Express.js**
 
-Express.js
+## 🚀 **How It Works **
 
-🚀 How It Works
+The webhook receives a **POST** request with a **JSON payload.**
 
-The webhook receives a POST request with a JSON payload.
-
-If the request contains { "type": "url_verification" }, it extracts the challenge value.
+If the request contains { "type": "url_verification" }, it extracts the **challenge** value.
 
 The server responds with { "challenge": "<received_value>" }.
 
-📡 Deployment Steps
+##📡 **Deployment Steps**
 
-Clone the repository:
+**Clone the repository**
+  mkdir stlack-webhook
+  cd slack-webhook
+  git clone <link>
 
-mkdir stlack-webhook
-cd slack-webhook
-git clone <link>
-
-Install dependencies:
+**Install dependencies:**
 
 npm install express body-parser
 
-Run the server:
+**Run the server:**
 
 npm start
 
-🧪 Testing the Webhook
+## 🧪 **Testing the Webhook**
 
 Using curl
 
