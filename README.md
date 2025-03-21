@@ -23,7 +23,7 @@ This webhook is deployed using **Railway.app**, a cloud-based platform for easil
 
 Deployed webhook URL:  
 ```sh
-https://slack-webhook-production-1ea0.up.railway.app/
+https://slack-webhook-production-1ea0.up.railway.app/slack-webhook
 ```
 
 ## 🧪 **Testing the Webhook**
