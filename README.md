@@ -20,13 +20,13 @@ The server responds with { "challenge": "<received_value>" }.
 ## 📡 **Deployment Steps**
 
 **Clone the repository**
-
+```sh
   mkdir stlack-webhook
   
   cd slack-webhook
   
   git clone <link>
-
+```
 **Install dependencies:**
 
 npm install express body-parser
