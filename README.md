@@ -53,9 +53,9 @@ Expected Response:
 ```
 ### **Using Postman**
 
-Open Postman and create a new POST request.
+Open Postman and create a new **POST request.**
 
-Set the request URL to **<your-ngrok-or-server-url>/slack-webhook.**
+Set the **request URL** to **<your-ngrok-or-server-url>/slack-webhook.**
 
 Go to the Body tab and choose raw, then select **JSON format.**
 
