@@ -2,7 +2,7 @@
 
 ## 📌 **Overview**
 
-This project is a webhook handler for Slack’s URL verification process. It accepts POST requests and responds with the challenge token.
+This project is a webhook handler for Slack’s URL verification process. It accepts POST requests and responds with the challenge value.
 
 ## 🛠 **Tech Stack**
 
