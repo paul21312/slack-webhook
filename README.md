@@ -11,29 +11,19 @@ This project is a webhook handler for Slack’s URL verification process. It acc
 
 ## 🚀 **How It Works**
 
-The webhook receives a **POST** request with a **JSON payload.**
-
-If the request contains { "type": "url_verification" }, it extracts the **challenge** value.
-
-The server responds with { "challenge": "<received_value>" }.
+1. The webhook receives a **POST** request with a **JSON payload**.
+2. If the request contains `{ "type": "url_verification" }`, it extracts the **challenge** value.
+3. The server responds with `{ "challenge": "<received_value>" }`.
 
 ## 📡 **Deployment Steps**
 
-**Clone the repository**
-```sh
-  mkdir stlack-webhook-repo
-  cd stlack-webhook-repo
-  git clone <link>
-  cd slack-webhook
-```
-**Install dependencies:**
-```sh
-npm install express body-parser
-```
+This webhook is deployed using **Railway.app**, a cloud-based platform for easily hosting Node.js applications. The application is configured to listen for incoming Slack event requests on a public URL. 
 
-**Run the server:**
+## 🔗 **Webhook Public URL**
+
+Deployed webhook URL:  
 ```sh
-npm start
+https://slack-webhook-production-1ea0.up.railway.app/
 ```
 
 ## 🧪 **Testing the Webhook**
@@ -41,7 +31,7 @@ npm start
 ### **Using curl**
 
 ```sh
-curl -X POST -H "Content-Type: application/json" -d '{"type": "url_verification", "challenge": "test-challenge-value"}' <your-ngrok-or-server-url>/slack-webhook
+curl -X POST -H "Content-Type: application/json" -d '{"type": "url_verification", "challenge": "test-challenge-value"}' https://slack-webhook-production-1ea0.up.railway.app/slack-webhook
 ```
 
 Expected Response:
@@ -54,8 +44,10 @@ Expected Response:
 
 Open Postman and create a new **POST request.**
 
-Set the **request URL** to **<your-ngrok-or-server-url>/slack-webhook.**
-
+Set the **request URL** to: 
+```sh
+https://slack-webhook-production-1ea0.up.railway.app/slack-webhook
+```
 Go to the Body tab and choose raw, then select **JSON format.**
 
 **Enter the following JSON:**
@@ -65,7 +57,7 @@ Go to the Body tab and choose raw, then select **JSON format.**
    "challenge": "test-challenge-value"
 }
 ```
-Click Send, and the response should return:
+Click **Send**, and the response should return:
 ```sh
 {
    "challenge": "test-challenge-value"
