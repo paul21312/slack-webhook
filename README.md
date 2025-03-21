@@ -67,14 +67,4 @@ Click Send, and the response should return:
    "challenge": "test-challenge-value"
 }
 
-📂 Folder Structure
-
-slack-webhook/
-├── server.js        # Main server file
-├── package.json     # Project dependencies & scripts
-├── README.md        # Project documentation
-
-🔗 Public URL
-
-Your deployed webhook URL: <your-ngrok-or-server-url>/slack-webhook
 
