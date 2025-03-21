@@ -55,21 +55,21 @@ Expected Response:
 
 Open Postman and create a new POST request.
 
-Set the request URL to <your-ngrok-or-server-url>/slack-webhook.
+Set the request URL to **<your-ngrok-or-server-url>/slack-webhook.**
 
-Go to the Body tab and choose raw, then select JSON format.
+Go to the Body tab and choose raw, then select **JSON format.**
 
-Enter the following JSON:
-
+**Enter the following JSON:**
+```sh
 {
    "type": "url_verification",
    "challenge": "test-challenge-value"
 }
-
+```
 Click Send, and the response should return:
-
+```sh
 {
    "challenge": "test-challenge-value"
 }
-
+```
 
