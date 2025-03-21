@@ -1,82 +1,74 @@
-Slack Webhook Handler
+# **Slack Webhook Handler**
 
-📌 Overview
+## 📌 **Overview**
 
-This project is a webhook handler for Slack’s URL verification process. It accepts POST requests and responds with the challenge token.
+This project is a webhook handler for Slack’s URL verification process. It accepts POST requests and responds with the challenge value if it contains type = url_verification.
 
-🛠 Tech Stack
+## 🛠 **Tech Stack**
 
-Node.js
+- **Node.js**
+- **Express.js**
 
-Express.js
+## 🚀 **How It Works**
 
-🚀 How It Works
+The webhook receives a **POST** request with a **JSON payload.**
 
-The webhook receives a POST request with a JSON payload.
-
-If the request contains { "type": "url_verification" }, it extracts the challenge value.
+If the request contains { "type": "url_verification" }, it extracts the **challenge** value.
 
 The server responds with { "challenge": "<received_value>" }.
 
-📡 Deployment Steps
+## 📡 **Deployment Steps**
 
-Clone the repository:
-
-mkdir stlack-webhook
-cd slack-webhook
-git clone <link>
-
-Install dependencies:
-
+**Clone the repository**
+```sh
+  mkdir stlack-webhook-repo
+  cd stlack-webhook-repo
+  git clone <link>
+  cd slack-webhook
+```
+**Install dependencies:**
+```sh
 npm install express body-parser
+```
 
-Run the server:
-
+**Run the server:**
+```sh
 npm start
+```
 
-🧪 Testing the Webhook
+## 🧪 **Testing the Webhook**
 
-Using curl
+### **Using curl**
 
-curl -X POST -H "Content-Type: application/json" \
--d '{"type": "url_verification", "challenge": "test-challenge-value"}' \
-<your-ngrok-or-server-url>/slack-webhook
+```sh
+curl -X POST -H "Content-Type: application/json" -d '{"type": "url_verification", "challenge": "test-challenge-value"}' <your-ngrok-or-server-url>/slack-webhook
+```
 
 Expected Response:
-
+```sh
 {
   "challenge": "test-challenge-value"
 }
+```
+### **Using Postman**
 
-Using Postman
+Open Postman and create a new **POST request.**
 
-Open Postman and create a new POST request.
+Set the **request URL** to **<your-ngrok-or-server-url>/slack-webhook.**
 
-Set the request URL to <your-ngrok-or-server-url>/slack-webhook.
+Go to the Body tab and choose raw, then select **JSON format.**
 
-Go to the Body tab and choose raw, then select JSON format.
-
-Enter the following JSON:
-
+**Enter the following JSON:**
+```sh
 {
    "type": "url_verification",
    "challenge": "test-challenge-value"
 }
-
+```
 Click Send, and the response should return:
-
+```sh
 {
    "challenge": "test-challenge-value"
 }
-
-📂 Folder Structure
-
-slack-webhook/
-├── server.js        # Main server file
-├── package.json     # Project dependencies & scripts
-├── README.md        # Project documentation
-
-🔗 Public URL
-
-Your deployed webhook URL: <your-ngrok-or-server-url>/slack-webhook
+```
 
