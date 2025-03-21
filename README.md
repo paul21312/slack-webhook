@@ -46,11 +46,11 @@ curl -X POST -H "Content-Type: application/json" -d '{"type": "url_verification"
 ```
 
 Expected Response:
-
+```sh
 {
   "challenge": "test-challenge-value"
 }
-
+```
 ### **Using Postman**
 
 Open Postman and create a new POST request.
