@@ -9,7 +9,7 @@ This project is a webhook handler for Slack’s URL verification process. It acc
 - **Node.js**
 - **Express.js**
 
-## 🚀 **How It Works **
+## 🚀 **How It Works**
 
 The webhook receives a **POST** request with a **JSON payload.**
 
@@ -34,7 +34,7 @@ npm start
 
 ## 🧪 **Testing the Webhook**
 
-Using curl
+### **Using curl**
 
 curl -X POST -H "Content-Type: application/json" \
 -d '{"type": "url_verification", "challenge": "test-challenge-value"}' \
@@ -46,7 +46,7 @@ Expected Response:
   "challenge": "test-challenge-value"
 }
 
-Using Postman
+### **Using Postman**
 
 Open Postman and create a new POST request.
 
