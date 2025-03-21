@@ -6,8 +6,8 @@ This project is a webhook handler for Slack’s URL verification process. It acc
 
 ## 🛠 **Tech Stack**
 
-**- Node.js
-- Express.js**
+- **Node.js**
+- **Express.js**
 
 ## 🚀 **How It Works **
 
@@ -17,7 +17,7 @@ If the request contains { "type": "url_verification" }, it extracts the **challe
 
 The server responds with { "challenge": "<received_value>" }.
 
-##📡 **Deployment Steps**
+## 📡 **Deployment Steps**
 
 **Clone the repository**
   mkdir stlack-webhook
