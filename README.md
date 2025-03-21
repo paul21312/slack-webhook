@@ -28,12 +28,14 @@ The server responds with { "challenge": "<received_value>" }.
   git clone <link>
 ```
 **Install dependencies:**
-
+```sh
 npm install express body-parser
+```
 
 **Run the server:**
-
+```sh
 npm start
+```
 
 ## 🧪 **Testing the Webhook**
 
