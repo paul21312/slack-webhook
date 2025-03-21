@@ -21,11 +21,10 @@ The server responds with { "challenge": "<received_value>" }.
 
 **Clone the repository**
 ```sh
-  mkdir stlack-webhook
-  
-  cd slack-webhook
-  
+  mkdir stlack-webhook-repo
+  cd stlack-webhook-repo
   git clone <link>
+  cd slack-webhook
 ```
 **Install dependencies:**
 ```sh
